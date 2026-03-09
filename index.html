@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Día de la Mujer</title>
+    <!-- Fuentes Elegantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Librerías CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader Inicial -->
+    <div id="loader">
+        <div class="heart-loader">
+            <i class="fa-solid fa-heart"></i>
+            <p>Preparando algo especial...</p>
+        </div>
+    </div>
+
+    <!-- Contenedor de Partículas (Fondo Animado) -->
+    <div id="tsparticles"></div>
+
+    <!-- 1. Sección Hero / Bienvenida -->
+    <section id="hero" class="full-screen flex-center relative">
+        <div class="hero-content text-center glass-card" data-aos="zoom-in" data-aos-duration="1500">
+            <!-- EDITAR AQUÍ: Título Principal -->
+            <h1 class="hero-title script-font">Feliz Día de la Mujer</h1>
+            
+            <!-- EDITAR AQUÍ: Subtítulo -->
+            <p class="hero-subtitle">Para mi persona especial</p>
+            
+            <a href="#dedicatoria" class="btn-premium pulse-anim">
+                Abrir sorpresa <i class="fa-solid fa-gift"></i>
+            </a>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <p>Desliza</p>
+            <i class="fa-solid fa-chevron-down bounce"></i>
+        </div>
+    </section>
+
+    <!-- 2. Sección Carta / Dedicatoria -->
+    <section id="dedicatoria" class="section-padding flex-center relative">
+        <div class="container" data-aos="fade-up" data-aos-duration="1200">
+            <div class="glass-card letter-card">
+                <div class="letter-header">
+                    <i class="fa-solid fa-envelope-open-text icon-highlight"></i>
+                    <!-- EDITAR AQUÍ: Nombre o encabezado de la carta -->
+                    <h2 class="section-title script-font">Para ti...</h2>
+                </div>
+                <div class="letter-body">
+                    <!-- El texto de la carta se edita en script.js (Typed.js) -->
+                    <span id="typed-text" class="typed-text"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Sección Galería de Fotos (Oculta por solicitud) -->
+    <!--
+    <section id="galeria" class="section-padding flex-center">
+        <div class="container text-center" data-aos="fade-up" data-aos-duration="1200">
+            <h2 class="section-title script-font mb-4">Nuestros Momentos</h2>
+            <p class="section-desc mb-5">Instantes que atesoro a tu lado</p>
+            
+            <div class="swiper mySwiper glass-card">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80" alt="Recuerdo especial 1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80" alt="Recuerdo especial 2">
+                    </div>
+                     <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80" alt="Recuerdo especial 3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://images.unsplash.com/photo-1509001333319-944a10d736bf?auto=format&fit=crop&w=600&q=80" alt="Recuerdo especial 4">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </section>
+    -->
+
+    <!-- 4. Sección Video sorpresa -->
+    <section id="video-sec" class="section-padding flex-center relative">
+        <div class="container text-center" data-aos="zoom-in" data-aos-duration="1200">
+            <h2 class="section-title script-font mb-4">Un instante mágico</h2>
+            <p class="section-desc mb-5">Un recuerdo para no olvidar</p>
+            
+            <div class="video-container glass-card pulse-anim" style="padding: 15px; background: rgba(255, 255, 255, 0.6); max-width: 600px; border-radius: 30px;">
+                <div class="video-wrapper" style="box-shadow: 0 20px 50px rgba(216, 27, 96, 0.3);">
+                    <video autoplay loop muted playsinline class="custom-video" style="border-radius: 20px;">
+                        <source src="video/WhatsApp Video 2026-03-08 at 3.06.37 PM.mp4" type="video/mp4">
+                        Tu navegador no soporta el reproductor de video.
+                    </video>
+                </div>
+                <div class="video-deco" style="top: -15px; right: -15px; width: 50px; height: 50px; background: var(--primary-color);">
+                    <i class="fa-solid fa-heart icon-pulse"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Sección Frases / Palabritas -->
+    <section id="frases" class="section-padding flex-center">
+        <div class="container">
+            <h2 class="section-title script-font text-center mb-5" data-aos="fade-down">Lo que representas</h2>
+            
+            <div class="grid-frases">
+                <!-- EDITAR AQUÍ: Frases Personalizadas -->
+                <div class="glass-card quote-card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p>“Tu esencia hace todo más bonito a mi alrededor.”</p>
+                </div>
+                
+                <div class="glass-card quote-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p>“Eres la combinación perfecta de fuerza, ternura y luz.”</p>
+                </div>
+                
+                <div class="glass-card quote-card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p>“Tu sonrisa merece todas las cosas lindas de este mundo.”</p>
+                </div>
+                
+                <div class="glass-card quote-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fa-solid fa-quote-left quote-icon"></i>
+                    <p>“Hoy y siempre celebro a la mujer maravillosa que eres.”</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Cierre Emotivo -->
+    <section id="cierre" class="full-screen flex-center relative text-center">
+        <div class="container" data-aos="zoom-in" data-aos-duration="1500">
+            <!-- EDITAR AQUÍ: Mensaje Final -->
+            <h2 class="final-title script-font">Siempre serás especial</h2>
+            
+            <!-- EDITAR AQUÍ: Fecha o firma -->
+            <p class="final-date">Feliz Día · 08 de Marzo</p>
+            
+            <button class="btn-premium heartbeat mt-4" id="btn-final">
+                Te quiero <i class="fa-solid fa-heart"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- ============================================== 
+         LIBRERÍAS DE JAVASCRIPT 
+         ============================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <!-- Script Principal -->
+    <script src="script.js"></script>
+</body>
+</html>
